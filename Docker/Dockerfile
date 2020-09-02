@@ -14,12 +14,14 @@ RUN apt-get -o Acquire::Max-FutureTime=86400 update && apt-get install -y \
 RUN python3 -m pip install pandas \
                         Rtree \
                         psycopg2 \
+                        numpy \
                         sqlalchemy \
                         datetime \
                         geopandas \
                         folium \
                         shapely \
-                        branca
+                        branca \
+                        descartes
 
 RUN mkdir -p /local/lib/python3.8/dist-packages/
 
