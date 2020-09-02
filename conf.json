@@ -1,22 +1,6 @@
 {
     "main_layer_path": "./data/quemado_proc.shp",
     "info_layers": {
-        "AreaQuemada" : {
-            "path":"./data/quemado_proc.shp",
-            "val_variable":"AreaPov",
-            "values_to_display": ["Distrito", "Tipo", "Duracao"],
-            "style_function": {
-                "weight": 1,
-                "color": "#545453",
-                "fillColor": "#9B9B9B",
-                "fillOpacity": 0.2
-            },
-            "highlight_function": {
-                "weight": 3,
-                "color": "black",
-                "fillOpacity": 1
-            }
-        },
         "Concellos" : {
             "path":"./data/concellos_proc.shp",
             "val_variable":"sup_quem",
@@ -32,9 +16,25 @@
                 "color": "black",
                 "fillOpacity": 1
             }
+        },
+        "AreaQuemada" : {
+            "path":"./data/quemado_proc.shp",
+            "val_variable":"AreaPov",
+            "values_to_display": ["Distrito", "Tipo", "Duracao"],
+            "style_function": {
+                "weight": 1,
+                "color": "#545453",
+                "fillColor": "#9B9B9B",
+                "fillOpacity": 0.2
+            },
+            "highlight_function": {
+                "weight": 3,
+                "color": "black",
+                "fillOpacity": 1
+            }
         }
     },
     "style": "OpenStreetMap",
-    "zoom": 8,
+    "zoom": 10,
     "output_path": "./output.html"
 }
