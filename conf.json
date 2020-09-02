@@ -36,5 +36,5 @@
     },
     "style": "OpenStreetMap",
     "zoom": 10,
-    "output_path": "./output.html"
+    "output_path": "./Results/output.html"
 }
