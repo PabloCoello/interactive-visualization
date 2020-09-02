@@ -1,0 +1,40 @@
+{
+    "main_layer_path": "",
+    "info_layers": {
+        "layer1" : {
+            "path":"",
+            "val_variable":"",
+            "values_to_display": [],
+            "style_function": {
+                "weight": 1,
+                "color": "#545453",
+                "fillColor": "#9B9B9B",
+                "fillOpacity": 0.2
+            },
+            "highlight_function": {
+                "weight": 3,
+                "color": "black",
+                "fillOpacity": 1
+            }
+        },
+        "layer2" : {
+            "path":"",
+            "val_variable":"",
+            "values_to_display": [],
+            "style_function": {
+                "weight": 1,
+                "color": "#545453",
+                "fillColor": "#9B9B9B",
+                "fillOpacity": 0.2
+            },
+            "highlight_function": {
+                "weight": 2,
+                "color": "black",
+                "fillOpacity": 1
+            }
+        }
+    },
+    "style": "OpenStreetMap",
+    "zoom": 12,
+    "output_path": ""
+}
