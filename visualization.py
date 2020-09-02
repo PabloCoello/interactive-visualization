@@ -22,7 +22,7 @@ class visualization():
             self.conf = json.load(f)
 
         self.starting_point = self.get_starting_point()
-        mapa = self.base_map(style)
+        mapa = self.base_map()
 
         for layer in self.conf["info_layers"].keys():
             print(layer)
@@ -40,7 +40,7 @@ class visualization():
         '''
         '''
         starting_point = gpd.read_file(self.conf["main_layer_path"]).centroid
-        return [float(starting_point.y), float(starting_point.x)]
+        return [np.mean(starting_point.y), np.mean(starting_point.x)]
 
 
     def base_map(self):
@@ -59,6 +59,8 @@ class visualization():
         layer_gdf = gpd.read_file(self.conf['info_layers'][layer]['path'])
         val = self.conf['info_layers'][layer]['val_variable']
         layer_conf = self.conf['info_layers'][layer]
+
+        layer_gdf = layer_gdf[layer_gdf[val].notnull()]
 
         if len(layer_gdf[val].unique()) > 1:
             colorscale = branca.colormap.linear.YlOrRd_09.scale(
@@ -85,10 +87,11 @@ class visualization():
             },
             tooltip=folium.features.GeoJsonTooltip(
                 fields=self.conf['info_layers'][layer]['values_to_display'],
-                aliases=[layer]
+                aliases=self.conf['info_layers'][layer]['values_to_display']
             )).add_to(mapa)
 
 
 if __name__ == '__main__':
     pl = visualization()
+    layer = pl.layer
     pl.to_html()
