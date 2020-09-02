@@ -15,10 +15,14 @@ RUN python3 -m pip install pandas \
                         Rtree \
                         psycopg2 \
                         sqlalchemy \
-                        datetime
+                        datetime \
+                        geopandas \
+                        folium \
+                        shapely \
+                        branca
 
 RUN mkdir -p /local/lib/python3.8/dist-packages/
 
 ENV PYTHONPATH=/local/lib/python3.8/dist-packages/
 
-WORKDIR /opt/global-sentinel/
+WORKDIR /opt/visual/
