@@ -3,8 +3,9 @@
     "info_layers": {
         "Concellos" : {
             "path":"./data/concellos_proc.shp",
-            "val_variable":"sup_quem",
-            "values_to_display": ["NAME_2", "sup_quem"],
+            "val_variable":"Superficie",
+            "values_to_display": ["Municipio", "Superficie"],
+            "names_to_display":["Municipio", "Superficie quemada"],
             "style_function": {
                 "weight": 1,
                 "color": "#545453",
@@ -17,10 +18,11 @@
                 "fillOpacity": 1
             }
         },
-        "AreaQuemada" : {
+        "incendios" : {
             "path":"./data/quemado_proc.shp",
-            "val_variable":"AreaPov",
-            "values_to_display": ["Distrito", "Tipo", "Duracao"],
+            "val_variable":"HaHora",
+            "values_to_display": ["Distrito", "Tipo", "HaHora", "Duracao", "AreaTotal"],
+            "names_to_display":["Distrito", "Tipo", "Ha/Hora", "Duración", "Area Total"],
             "style_function": {
                 "weight": 1,
                 "color": "#545453",
@@ -36,5 +38,5 @@
     },
     "style": "OpenStreetMap",
     "zoom": 10,
-    "output_path": "./Results/output.html"
+    "output_path": "./Results/concellos.html"
 }

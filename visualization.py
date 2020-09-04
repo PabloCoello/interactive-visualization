@@ -87,7 +87,7 @@ class visualization():
             },
             tooltip=folium.features.GeoJsonTooltip(
                 fields=self.conf['info_layers'][layer]['values_to_display'],
-                aliases=self.conf['info_layers'][layer]['values_to_display']
+                aliases=self.conf['info_layers'][layer]['names_to_display']
             )).add_to(mapa)
 
 
